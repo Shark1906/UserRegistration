@@ -7,6 +7,7 @@ public class UserRegistration {
 		ValidationOperation validationOperation = new ValidationOperation();
 		User user = new User();
 		System.out.println("FirstName : " + validationOperation.isValidFirstName(user));
+		System.out.println("LastName : " + validationOperation.isValidLastName(user));
 		
 	}
 	

@@ -15,4 +15,11 @@ public class ValidationOperation {
 		user.setfName(input);
 		return Pattern.matches(patternName, user.getfName());
 	}
+	
+	public boolean isValidLastName(User user) {
+		System.out.println("Enter LastName");
+		String input = sc.nextLine();
+		user.setlName(input);
+		return Pattern.matches(patternName, user.getlName());
+	}
 }
