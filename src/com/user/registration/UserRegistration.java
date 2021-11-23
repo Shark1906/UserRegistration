@@ -8,8 +8,6 @@ public class UserRegistration {
 		User user = new User();
 		System.out.println("FirstName : " + validationOperation.isValidFirstName(user));
 		System.out.println("LastName : " + validationOperation.isValidLastName(user));
-		
+		System.out.println("Email : " + validationOperation.isValidEmail(user));
 	}
-	
-	
 }
