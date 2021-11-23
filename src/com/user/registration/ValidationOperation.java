@@ -7,6 +7,7 @@ public class ValidationOperation {
 	String patternName = "^([A-Z]{1}+[a-z]{2,})*$";
 	String patternEmail = "^[0-9a-zA-Z+-._]+@[-+_.0-9a-zA-Z]*.[a-zA-Z]{2,3}.([a-zA-z]{2,3})*$";
 	String patternPhone = "^([0-9]{1,2})\\s([0-9]{10})$";
+	String patternPassword = "^([a-zA-Z]{8,})$";
 	
 	User user = new User();
 	Scanner sc = new Scanner(System.in);
@@ -37,5 +38,12 @@ public class ValidationOperation {
 		String input = sc.nextLine();
 		user.setPhoneNum(input);
 		return Pattern.matches(patternPhone, user.getPhoneNum());
+	}
+	
+	public boolean isValidPassword(User user) {
+		System.out.println("Enter Password");
+		String input = sc.nextLine();
+		user.setPassword(input);
+		return Pattern.matches(patternPassword, user.getPassword());
 	}
 }

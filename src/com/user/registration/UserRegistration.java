@@ -10,5 +10,6 @@ public class UserRegistration {
 		System.out.println("LastName : " + validationOperation.isValidLastName(user));
 		System.out.println("Email : " + validationOperation.isValidEmail(user));
 		System.out.println("Phone Number : " + validationOperation.isValidPhone(user));
+		System.out.println("Password : " + validationOperation.isValidPassword(user));
 	}
 }
