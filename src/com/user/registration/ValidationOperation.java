@@ -9,7 +9,7 @@ public class ValidationOperation {
 	String patternPhone = "^([0-9]{1,2})\\s([0-9]{10})$";
 	String patternPassword = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@]).{8,}$";
 	
-	User user = new User();
+	//User user = new User();
 	Scanner sc = new Scanner(System.in);
 	
 	public boolean isValidFirstName(User user) {
@@ -30,6 +30,10 @@ public class ValidationOperation {
 		System.out.println("Enter Email");
 		String input = sc.nextLine();
 		user.setEmailId(input);
+		return Pattern.matches(patternEmail, user.getEmailId());
+	}
+	
+	public boolean isValidEmailId(User user) {
 		return Pattern.matches(patternEmail, user.getEmailId());
 	}
 	
