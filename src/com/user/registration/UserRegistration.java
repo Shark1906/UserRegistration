@@ -2,7 +2,7 @@ package com.user.registration;
 
 public class UserRegistration {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UserRegistrationException {
 		
 		ValidationOperation validationOperation = new ValidationOperation();
 		User user = new User();

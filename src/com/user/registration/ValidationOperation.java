@@ -15,39 +15,75 @@ public class ValidationOperation {
 	public boolean isValidFirstName(User user) {
 		System.out.println("Enter FirstName");
 		String input = sc.nextLine();
+		try {
 		user.setfName(input);
+		if(Pattern.matches(patternName, user.getfName()) == false) {
+			throw new UserRegistrationException("FirstName");
+		}}catch(UserRegistrationException ex) {
+			System.out.println(ex);
+		}
 		return Pattern.matches(patternName, user.getfName());
 	}
 	
-	public boolean isValidLastName(User user) {
+	public boolean isValidLastName(User user)  {
 		System.out.println("Enter LastName");
 		String input = sc.nextLine();
+		try {
 		user.setlName(input);
+		if(Pattern.matches(patternName, user.getlName()) == false) {
+			throw new UserRegistrationException("LastName");
+		}}catch(UserRegistrationException ex) {
+			System.out.println(ex);
+		}
 		return Pattern.matches(patternName, user.getlName());
 	}
 	
 	public boolean isValidEmail(User user) {
 		System.out.println("Enter Email");
 		String input = sc.nextLine();
+		try {
 		user.setEmailId(input);
-		return Pattern.matches(patternEmail, user.getEmailId());
+		if(Pattern.matches(patternEmail, user.getEmailId()) == false) {
+			throw new UserRegistrationException("Email");
+		}}catch(UserRegistrationException ex) {
+			System.out.println(ex);
+		}
+		return Pattern.matches(patternEmail, user.getEmailId()); 
 	}
 	
 	public boolean isValidEmailId(User user) {
+		try {
+		if(Pattern.matches(patternEmail, user.getEmailId()) == false) {
+			throw new UserRegistrationException("Email"); 
+		}}catch(UserRegistrationException ex) {
+			System.out.println(ex);
+		}
 		return Pattern.matches(patternEmail, user.getEmailId());
 	}
 	
 	public boolean isValidPhone(User user) {
 		System.out.println("Enter Phone Number");
 		String input = sc.nextLine();
+		try {
 		user.setPhoneNum(input);
+		if(Pattern.matches(patternPhone, user.getPhoneNum()) == false) {
+			throw new UserRegistrationException("Phone");
+		}}catch(UserRegistrationException ex) {
+			System.out.println(ex);
+		}
 		return Pattern.matches(patternPhone, user.getPhoneNum());
 	}
 	
 	public boolean isValidPassword(User user) {
 		System.out.println("Enter Password");
 		String input = sc.nextLine();
+		try {
 		user.setPassword(input);
+		if(Pattern.matches(patternPassword, user.getPassword()) == false) {
+			throw new UserRegistrationException("Password");
+		}}catch(UserRegistrationException ex) {
+			System.out.println(ex);
+		}
 		return Pattern.matches(patternPassword, user.getPassword());
 	}
 }
