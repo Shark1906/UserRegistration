@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ValidationOperation {
 	String patternName = "^([A-Z]{1}+[a-z]{2,})*$";
-	String patternEmail = "^[0-9a-zA-Z+-._]+@[-+_.0-9a-zA-Z]{2,}.[a-zA-Z]{2,3}.([a-zA-z]{2,3})*$";
+	String patternEmail = "^[0-9a-zA-Z+-._]+@[-+_.0-9a-zA-Z]{1,}.[a-zA-Z]{2,3}.([a-zA-z]{2,3})*$";
 	String patternPhone = "^([0-9]{1,2})\\s([0-9]{10})$";
 	String patternPassword = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@]).{8,}$";
 	
