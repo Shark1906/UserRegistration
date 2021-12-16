@@ -28,7 +28,7 @@ public class MultipleEmailTest {
 	}
 	
 	@Parameterized.Parameters
-	public static Collection input() {
+	public static Collection<Object> input() {
 		return Arrays.asList(new Object[]{
 				"abc@yahoo.com",
 				"abc-100@yahoo.com",
